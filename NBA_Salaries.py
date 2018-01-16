@@ -4,6 +4,7 @@ salaries_file = open("nbasalaries.csv",'r')
 teams={}
 for line in salaries_file:
     player_data = line.split(',')
+    player_name = player_data[0]
     player_team=player_data[1]
     salary=int(player_data[2])
     if player_team in teams.keys():
